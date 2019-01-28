@@ -1,0 +1,5 @@
+RewriteBase /
+RewriteEngine On
+RewriteRule ^screen http://localhost:3000/$1 [P]
+RewriteRule ^console http://localhost:42425/$1 [P]
+
