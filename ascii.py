@@ -14,19 +14,18 @@ def updateJS(ascii):
     file = open(dir_path + filename, "r")
     lines = file.readlines()
     file.close()
-    print("read js")
 
     p = re.compile('.*let letter = "(.)".*')
 
-    file = open(filename, "w")
+    file = open(dir_path + filename, "w")
     for line in lines:
         m = p.match(line)
         if m:
             line = 'let letter = "{}"\n'.format(ascii)
-            print("updated asii from {} to {}. line is now:\n{}".format(m.group(1), ascii, line))
+            print("updated ascii from {} to {}. line is now:\n{}".format(m.group(1), ascii, line))
         file.write(line)
+        file.flush()
     file.close();
-    print("wrote js")
 
 if __name__ == '__main__':
     updateJS(randAscii())
