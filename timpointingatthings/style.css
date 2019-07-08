@@ -1,13 +1,21 @@
+
+
 #root {
 	  max-width: 80%;
 		margin-left: auto;
 	  margin-right: auto;
 		display: block;
+		color: #505050;
+		text-align: center;
+		font-family: 'Dosis', sans-serif;
 }
 
 .container {
-		margin-top: 50px;
-		margin-bottom: 50px;
+		margin-top: 80px;
+		margin-bottom: 80px;
+		border-radius: 10px;
+		box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+		background-color: rgba(255, 255, 255, 0.9);
 }
 
 .image {
@@ -23,9 +31,13 @@
 
 .title{
 	font-weight: bold;
-	font-size: 50;
+	font-size: 6vh;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .description{
 	font-style: italic;
+	padding: 15px;
+	font-size: 3vh;
 }
