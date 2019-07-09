@@ -50,7 +50,7 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-	background-color: #555;
+	background-color: #f1f1f1;
 
 }
 
@@ -62,11 +62,11 @@ li a {
 }
 
 li a:hover {
-  background-color: #f1f1f1;
-  color: black;
+  background-color: #555;
+  color: white;
 }
 
 .active {
-  background-color: #CF8D49;
-  color: white;
+  background-color: #234474;
+  color: #000000;
 }
