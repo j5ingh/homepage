@@ -1,13 +1,13 @@
 let letter = "w"
 let prisma
-let months = ["Januar", "Februar", "März", "April", "Mai", "Juni", "July", "August", "September", "Oktober", "November", "Dezember"]
 
 function preload() {
   prisma = loadFont('assets/Prisma.ttf')
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight)
+  let cnv = createCanvas(windowWidth, windowHeight)
+	cnv.style('z-index', '-1');
 }
 
 function draw() {
@@ -16,7 +16,6 @@ function draw() {
     drawStar()
   }
 
-  drawIntroduction()
   drawLetter()
 
   noLoop()
@@ -29,15 +28,6 @@ function drawStar() {
   w = random(0, height)
   s = random(1, 5)
   ellipse(h, w, s, s)
-}
-
-function drawIntroduction() {
-  textAlign(CENTER, TOP)
-  fill('rgba(255, 255, 255, 0.50)')
-  textSize(20)
-  let d = new Date();
-  month = months[d.getMonth()]
-  text(`das ~ASCII-Zeichen des Monats~ ${month} lautet`, width/2, 0)
 }
 
 function drawLetter() {

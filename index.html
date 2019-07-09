@@ -1,13 +1,33 @@
 <head>
+	<meta charset='utf-8'>
+
   <style>
     body {
       margin:0px;
     }
   </style>
   <script src="p5.min.js"></script>
+	<script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
   <script src="sketch.js"></script>
+
+	<link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
+
+	<ul>
+		<li class="active"><a href=".">ASCII Zeichen des Monats 🎁</a></li>
+	  <li><a href="./timpointingatthings">Tim pointing at things 👉🏻</a></li>
+	  <li><a href="./amitgonewild">Amit gone wild ⚡️</a></li>
+	</ul>
+
+	<div id="monthLabel" class="monthLabel">
+	</div>
+	<script>
+		let months = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+		let d = new Date();
+		month = months[d.getMonth()]
+		document.getElementById("monthLabel").innerHTML = `das ~ASCII-Zeichen des Monats~ ${month} lautet:`;
+	</script>
 
 </body>
